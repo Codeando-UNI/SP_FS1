@@ -1,5 +1,5 @@
 <?php
-
+// Hola mundo
 if( !empty($_GET)) {
 	if (isset($_GET["id1"])){
 		$id1  = htmlspecialchars($_GET["id1"],ENT_QUOTES);
