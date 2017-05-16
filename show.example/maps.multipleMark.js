@@ -23,6 +23,7 @@ var estado;
             position: coordenadas,
             map: map,
             title: datos[i].Name
+            icon: '../imgGustavo/'+datos[i].Parameters.State+'.png'
           });  
 
           

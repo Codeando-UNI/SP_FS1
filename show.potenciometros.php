@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html>
-<<<<<<< HEAD
 <head>
 	<title>Marcadore multiples v1.0
 	</title> 
-=======
+
   <head>
 <script type="text/javascript" languaje="javascript" src="js/jquery-3.2.1.min.js"></script>
->>>>>>> c05f97e1c9c951bc99182f9243361f2bcf68097f
 
 	
 <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyBLnlAQH441DxvN2xRinRYC3hyQ_5BGJGE" async="" defer="defer" type="text/javascript"></script>
@@ -17,7 +15,7 @@
         width: 100%;
        }
     </style>
-<<<<<<< HEAD
+
 
 </head>
 <body>
@@ -86,7 +84,8 @@
           var marker = new google.maps.Marker({
             position: coordenadas,
             map: map,
-            title: datos2[i].Name,            
+            title: datos2[i].Name, 
+            
             });  
 
     
@@ -94,7 +93,7 @@
                 return function() {
 
         $.ajax({
-            url: 'get.dataValue.static.php',
+            url: 'get.dataValue.php',
             type: 'POST',
             async: true,
             dataType: 'json',
@@ -120,7 +119,7 @@
         $parametros = {
                
             };
-        $url = "get.dataValue.static.php";
+        $url = "get.dataValue.php";
         $.ajax({
             type: "POST",
             url: $url,
@@ -133,6 +132,7 @@
                   zoom: ArrayData.mapOption.zoom,
                   center: new google.maps.LatLng(ArrayData.mapOption.centerPosition[0],ArrayData.mapOption.centerPosition[1]),
                   mapTypeId: google.maps.MapTypeId.ROADMAP
+
                 };
 
                 rescatarDatos ();   
@@ -170,4 +170,4 @@
 
 
 
->>>>>>> c05f97e1c9c951bc99182f9243361f2bcf68097f
+
