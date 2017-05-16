@@ -30,10 +30,7 @@
 <script type="text/javascript" languaje="javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="show.example/maps.multipleMark.js"></script>
 <script type="text/javascript" src="show.example/rescatar.datos.js"></script>
-</body>
-</html>
-=======
-  </head>
+</head>
   <body>
     <h3>My Google Maps Demo</h3>
     <div id="map"></div>

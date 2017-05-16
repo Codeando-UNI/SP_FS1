@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-<script type="text/javascript" languaje="javascript" src="js/jquery.js"></script>
+<script type="text/javascript" languaje="javascript" src="js/jquery-3.2.1.min.js"></script>
 
     <style>
       #map {
@@ -23,7 +23,7 @@
             
         };
         $.ajax({
-            url: 'get.dataParametros.php',
+            url: 'get.dataPotenciometros.php',
             type: 'POST',
             async: true,
             dataType: 'json',
@@ -71,7 +71,7 @@
             'ID' : Id
         };
         $.ajax({
-            url: 'get.dataValue.static.php',
+            url: 'get.dataValue.php',
             type: 'POST',
             async: true,
             dataType: 'json',
@@ -80,8 +80,9 @@
               console.log(error);
             },
             success: function (datos){
+              //console.log(datos);
               //alert(datos.medidas[0].valor);
-              infowindow.setContent(""+datos.medidas[0].valor);
+              infowindow.setContent(""+datos.valor);
                 infowindow.open(map, marker);
             }
         });

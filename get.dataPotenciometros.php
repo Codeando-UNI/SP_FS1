@@ -7,12 +7,12 @@ $data = array();
 $acumLat = 0;
 $acumLong = 0;
 while ($mostrar = mysqli_fetch_array($sad)) {
-    $tmp = array("id" => $mostrar["id"],
-        "name" => $mostrar["name"],
-        "create_date" => $mostrar["create_date"],
-        "latitude" => $mostrar["latitude"],
-        "longitude" => $mostrar["longitude"],
-        "active" => $mostrar["active"]
+    $tmp = array("Id" => $mostrar["id"],
+        "Name" => $mostrar["name"],
+        "Create_date" => $mostrar["create_date"],
+        "latitude" => (float)$mostrar["latitude"],
+        "longitude" => (float)$mostrar["longitude"],
+        "active" => (float)$mostrar["active"]
     );
     array_push($data, $tmp);
     $acumLat = $acumLat + (float) $mostrar["latitude"];
@@ -22,7 +22,7 @@ $num_data = sizeof($data);
 $promedioLat = $acumLat / $num_data;
 $promedioLong = $acumLong / $num_data;
 
-$StaticInfo = array(
+/*$StaticInfo = array(
     ' datos ' => $data,
     ' Map ' =>
     [ ' option ' => [
@@ -30,5 +30,12 @@ $StaticInfo = array(
             'Latcenter' => $promedioLat,
             'Longcenter' => $promedioLong,
         ]]);
+*/
+$StaticInfo = array(
+    'datos' => $data,
+    'zoom' => 16,
+    'latcenter' => (float)$promedioLat,
+    'longcenter' => (float)$promedioLong,
+    );
 
 echo json_encode($StaticInfo);
