@@ -33,7 +33,7 @@ $promedioLong = $acumLong / $num_data;
 */
 $StaticInfo = array(
     'datos' => $data,
-    'zoom' => 8,
+    'zoom' => 12,
     'latcenter' => (float)$promedioLat,
     'longcenter' => (float)$promedioLong,
     );
