@@ -5,30 +5,26 @@ Static Info to Load Screen 1
     
 */
 $StaticInfo = array(
-    'zoom' => 10,
+    'zoom' => 12,
     'latcenter'=> -12.0167,
     'longcenter'=> -77.1167,
     'datos' => [
         ['Id'=>1,
-         'Name' => 'aerpuerto',
+         'Name' => 'Aeropuerto',
          'latitude'=> -12.0167,
          'longitude'=> -77.1167],
         ['Id'=>2,
-         'Name' => 'estadio',
+         'Name' => 'Estadio',
          'latitude'=> -12.0673,
          'longitude'=> -77.0337],
         ['Id'=>3,
-         'Name' => 'la nose',
+         'Name' => 'Comedor',
          'latitude'=> -12.0689,
          'longitude'=> -77.1637],
          ['Id'=>4,
-         'Name' => 'mar',
+         'Name' => 'Piscina',
          'latitude'=> -12.1689,
-         'longitude'=> -77.2637],
-         ['Id'=>5,
-         'Name' => 'marte',
-         'latitude'=> -12.1689,
-         'longitude'=> -77.2937]
+         'longitude'=> -77.2637]
     ]
     
     // Maybe I could include Alerts
